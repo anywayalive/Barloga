@@ -2,9 +2,18 @@
 # The function should take an integer and returns 1, 2, or 3.
 
 def make_move(sticks):
-    i = 2
-    for i  sticks:
-        sticks = sticks - i
-        i = input('Input number 1>=3: ')  
-    return sticks
-make_move(3)
+    bro = sticks % 4
+    if bro != 0:
+        return bro
+    else:
+        return 1
+
+# //////////////////////////////////////////////
+
+def makeMove(sticks):
+    return max(sticks % 4, 1)
+
+# /////////////////////////////////////
+
+def makeMove(sticks):
+    return sticks % 4 or 1
